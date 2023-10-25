@@ -13,9 +13,10 @@
 		A991921A2AE9116A002F5406 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99192182AE9116A002F5406 /* Main.storyboard */; };
 		A991921C2AE9116C002F5406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A991921B2AE9116C002F5406 /* Assets.xcassets */; };
 		A991921F2AE9116C002F5406 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A991921D2AE9116C002F5406 /* LaunchScreen.storyboard */; };
-		A991922A2AE9116C002F5406 /* Tdd_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99192292AE9116C002F5406 /* Tdd_SampleTests.swift */; };
+		A991922A2AE9116C002F5406 /* Tdd_SampleTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99192292AE9116C002F5406 /* Tdd_SampleTableViewTests.swift */; };
 		A99192342AE9116C002F5406 /* Tdd_SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99192332AE9116C002F5406 /* Tdd_SampleUITests.swift */; };
 		A99192362AE9116C002F5406 /* Tdd_SampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99192352AE9116C002F5406 /* Tdd_SampleUITestsLaunchTests.swift */; };
+		A99192452AE92A82002F5406 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99192442AE92A82002F5406 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +46,11 @@
 		A991921E2AE9116C002F5406 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A99192202AE9116C002F5406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A99192252AE9116C002F5406 /* Tdd SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tdd SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A99192292AE9116C002F5406 /* Tdd_SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tdd_SampleTests.swift; sourceTree = "<group>"; };
+		A99192292AE9116C002F5406 /* Tdd_SampleTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tdd_SampleTableViewTests.swift; sourceTree = "<group>"; };
 		A991922F2AE9116C002F5406 /* Tdd SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tdd SampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99192332AE9116C002F5406 /* Tdd_SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tdd_SampleUITests.swift; sourceTree = "<group>"; };
 		A99192352AE9116C002F5406 /* Tdd_SampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tdd_SampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A99192442AE92A82002F5406 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +101,8 @@
 		A99192112AE9116A002F5406 /* Tdd Sample */ = {
 			isa = PBXGroup;
 			children = (
-				A99192122AE9116A002F5406 /* AppDelegate.swift */,
-				A99192142AE9116A002F5406 /* SceneDelegate.swift */,
-				A99192162AE9116A002F5406 /* ViewController.swift */,
-				A99192182AE9116A002F5406 /* Main.storyboard */,
-				A991921B2AE9116C002F5406 /* Assets.xcassets */,
-				A991921D2AE9116C002F5406 /* LaunchScreen.storyboard */,
+				A99192432AE92A72002F5406 /* Feature */,
+				A99192422AE92A68002F5406 /* Base */,
 				A99192202AE9116C002F5406 /* Info.plist */,
 			);
 			path = "Tdd Sample";
@@ -113,7 +111,7 @@
 		A99192282AE9116C002F5406 /* Tdd SampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				A99192292AE9116C002F5406 /* Tdd_SampleTests.swift */,
+				A99192462AE92A89002F5406 /* TableView */,
 			);
 			path = "Tdd SampleTests";
 			sourceTree = "<group>";
@@ -125,6 +123,35 @@
 				A99192352AE9116C002F5406 /* Tdd_SampleUITestsLaunchTests.swift */,
 			);
 			path = "Tdd SampleUITests";
+			sourceTree = "<group>";
+		};
+		A99192422AE92A68002F5406 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A99192122AE9116A002F5406 /* AppDelegate.swift */,
+				A99192142AE9116A002F5406 /* SceneDelegate.swift */,
+				A99192162AE9116A002F5406 /* ViewController.swift */,
+				A99192182AE9116A002F5406 /* Main.storyboard */,
+				A991921B2AE9116C002F5406 /* Assets.xcassets */,
+				A991921D2AE9116C002F5406 /* LaunchScreen.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A99192432AE92A72002F5406 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				A99192442AE92A82002F5406 /* HomeViewController.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		A99192462AE92A89002F5406 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A99192292AE9116C002F5406 /* Tdd_SampleTableViewTests.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +288,7 @@
 				A99192172AE9116A002F5406 /* ViewController.swift in Sources */,
 				A99192132AE9116A002F5406 /* AppDelegate.swift in Sources */,
 				A99192152AE9116A002F5406 /* SceneDelegate.swift in Sources */,
+				A99192452AE92A82002F5406 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A991922A2AE9116C002F5406 /* Tdd_SampleTests.swift in Sources */,
+				A991922A2AE9116C002F5406 /* Tdd_SampleTableViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
