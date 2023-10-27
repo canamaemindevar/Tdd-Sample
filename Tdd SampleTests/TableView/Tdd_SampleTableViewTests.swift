@@ -11,8 +11,16 @@ import XCTest
 // RED -> GREEN -> REFACTOR
 final class Tdd_SampleTableViewTests: XCTestCase {
 
-    var sut = HomeViewController()
+    var sut = HomeViewController(articleManager: MockRepository())
 
+    func createArticleWithCount(num: Int) -> [Article] {
+     var newArticles = [Article]()
+        for _ in 0..<num {
+            let artic = Article(author: "Me", content: "Nothing")
+            newArticles.append(artic)
+        }
+        return newArticles
+    }
 
     func test_IsBackgroundcolorValid() {
         sut.loadViewIfNeeded()
@@ -31,15 +39,15 @@ final class Tdd_SampleTableViewTests: XCTestCase {
     // MARK: Tableview 0
     func test_tableViewShouldBeEmpty()  {
         // when
-        sut.articles = []
+        sut.articles = createArticleWithCount(num: 0)
         // then
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
     }
     // MARK: Tableview 1
     func test_tableViewShouldBeOne() {
         // when
+        sut.articles = createArticleWithCount(num: 1)
         sut.loadViewIfNeeded()
-        sut.articles = [""]
         // then
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 1)
     }
@@ -47,10 +55,17 @@ final class Tdd_SampleTableViewTests: XCTestCase {
     func test_tableViewShouldBeMany() {
         // when
         sut.loadViewIfNeeded()
-        sut.articles = ["","",""]
+        sut.articles = createArticleWithCount(num: 3)
         // then
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 3)
     }
+
+    func test_tableViewShouldBeSameWithService() {
+        sut.loadViewIfNeeded()
+        sut.fetchData()
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 15)
+    }
+
 }
 
 

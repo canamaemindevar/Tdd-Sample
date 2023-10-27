@@ -9,7 +9,19 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
-    var articles = [String]()
+    var articles = [Article]()
+
+    var articleManager: ArticlesFetchable
+
+    init(articleManager: ArticlesFetchable) {
+        self.articleManager = articleManager
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
 
     let tableView: UITableView = {
         let tableView = UITableView(frame: .zero,style: .grouped)
@@ -20,7 +32,7 @@ final class HomeViewController: UIViewController {
         tableView.layer.cornerRadius = 0
         return tableView
     }()
-    
+
     override func viewDidLoad() {
         setupView()
     }
@@ -32,6 +44,16 @@ final class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.frame = view.bounds
+    }
+    func fetchData() {
+        articleManager.fetchArticles { res in
+            switch res {
+                case .success(let success):
+                    self.articles = success
+                case .failure(let failure):
+                   print(failure)
+            }
+        }
     }
 }
 

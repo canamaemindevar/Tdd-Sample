@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A981AA002AEC0D9400F3590A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981A9FF2AEC0D9400F3590A /* Repository.swift */; };
+		A981AA022AEC0E1700F3590A /* ErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981AA012AEC0E1700F3590A /* ErrorEnum.swift */; };
+		A981AA042AEC0E3800F3590A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981AA032AEC0E3800F3590A /* Helpers.swift */; };
+		A981AA062AEC0E9800F3590A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981AA052AEC0E9800F3590A /* NetworkManager.swift */; };
+		A981AA0C2AEC10A400F3590A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981AA0B2AEC10A400F3590A /* Protocols.swift */; };
+		A981AA0F2AEC139B00F3590A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981AA0E2AEC139B00F3590A /* Article.swift */; };
+		A981AA122AEC196800F3590A /* MockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981AA112AEC196800F3590A /* MockRepository.swift */; };
 		A99192132AE9116A002F5406 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99192122AE9116A002F5406 /* AppDelegate.swift */; };
 		A99192152AE9116A002F5406 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99192142AE9116A002F5406 /* SceneDelegate.swift */; };
 		A99192172AE9116A002F5406 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99192162AE9116A002F5406 /* ViewController.swift */; };
@@ -37,6 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A981A9FF2AEC0D9400F3590A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		A981AA012AEC0E1700F3590A /* ErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnum.swift; sourceTree = "<group>"; };
+		A981AA032AEC0E3800F3590A /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		A981AA052AEC0E9800F3590A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A981AA0B2AEC10A400F3590A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		A981AA0E2AEC139B00F3590A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		A981AA112AEC196800F3590A /* MockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepository.swift; sourceTree = "<group>"; };
 		A991920F2AE9116A002F5406 /* Tdd Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tdd Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99192122AE9116A002F5406 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A99192142AE9116A002F5406 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +92,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A981A9FE2AEC0D7400F3590A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A981AA092AEC0F7800F3590A /* Core */,
+				A981AA0A2AEC109100F3590A /* Protocols */,
+				A981A9FF2AEC0D9400F3590A /* Repository.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A981AA092AEC0F7800F3590A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A981AA012AEC0E1700F3590A /* ErrorEnum.swift */,
+				A981AA032AEC0E3800F3590A /* Helpers.swift */,
+				A981AA052AEC0E9800F3590A /* NetworkManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A981AA0A2AEC109100F3590A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A981AA0B2AEC10A400F3590A /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A981AA0D2AEC139200F3590A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A981AA0E2AEC139B00F3590A /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A981AA102AEC195100F3590A /* MockRepository */ = {
+			isa = PBXGroup;
+			children = (
+				A981AA112AEC196800F3590A /* MockRepository.swift */,
+			);
+			path = MockRepository;
+			sourceTree = "<group>";
+		};
 		A99192062AE9116A002F5406 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +159,8 @@
 		A99192112AE9116A002F5406 /* Tdd Sample */ = {
 			isa = PBXGroup;
 			children = (
+				A981AA0D2AEC139200F3590A /* Model */,
+				A981A9FE2AEC0D7400F3590A /* Network */,
 				A99192432AE92A72002F5406 /* Feature */,
 				A99192422AE92A68002F5406 /* Base */,
 				A99192202AE9116C002F5406 /* Info.plist */,
@@ -111,6 +171,7 @@
 		A99192282AE9116C002F5406 /* Tdd SampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				A981AA102AEC195100F3590A /* MockRepository */,
 				A99192462AE92A89002F5406 /* TableView */,
 			);
 			path = "Tdd SampleTests";
@@ -287,8 +348,14 @@
 			files = (
 				A99192172AE9116A002F5406 /* ViewController.swift in Sources */,
 				A99192132AE9116A002F5406 /* AppDelegate.swift in Sources */,
+				A981AA002AEC0D9400F3590A /* Repository.swift in Sources */,
+				A981AA0C2AEC10A400F3590A /* Protocols.swift in Sources */,
+				A981AA0F2AEC139B00F3590A /* Article.swift in Sources */,
 				A99192152AE9116A002F5406 /* SceneDelegate.swift in Sources */,
+				A981AA062AEC0E9800F3590A /* NetworkManager.swift in Sources */,
 				A99192452AE92A82002F5406 /* HomeViewController.swift in Sources */,
+				A981AA042AEC0E3800F3590A /* Helpers.swift in Sources */,
+				A981AA022AEC0E1700F3590A /* ErrorEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A991922A2AE9116C002F5406 /* Tdd_SampleTableViewTests.swift in Sources */,
+				A981AA122AEC196800F3590A /* MockRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
